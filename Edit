@@ -1,0 +1,48 @@
+<html>
+ <head>
+ 	<title>Add a new product's data</title>
+ </head>
+ <body>
+ 	<h1> product's form </h1>
+ 	<form method="post" action="edit1.php">
+ 		<?php
+ 		mysql_connect("localhost","product2","987");
+ 		mysql_query("use products");
+ 		$id=$_REQUEST['id'];
+ 		$f = mysql_query("select * from products where id=$id;");
+ 		$r = mysql_fetch_array($f);
+ 		?>
+ 		<p>
+ 		<label> name:
+ 			<input type=text name="name" value='<?php echo $r['name']?>'>
+ 		</label>
+ 		<br>
+ 		<label> Firm:
+ 			<input type=text name="firm" value='<?php echo $r['Firm']?>'>
+ 		</label>
+ 		<br>
+ 		<label> Model:
+ 			<input type=text name="Model" value='<?php echo $r['Model']?>'>
+ 		</label>
+ 		<br>
+ 		<label> Usage:
+ 			<input type=text name="Usage" value='<?php echo $r['Usage']?>'>
+ 		</label>
+ 		<br>
+ 		<label> Created:
+ 			<input type=text name="Created" value='<?php echo $r['Created']?>'>
+ 		</label>
+ 		<br>
+ 		<label> New
+ 			<select name="New">
+ 				<option <?php if ($r['New']=='m') echo " selected "; ?> value="1">New</option>
+ 				<option <?php if ($r['New']=='f') echo " selected "; ?> value="0">Used</option>
+ 			</select>
+ 		</label>
+ 		<input type=hidden name="id" value='<?php echo $r['id'] ?>'>
+ 		<input type=submit value="save">
+ 	</p>
+ 	</form>
+ </html>
+
+
