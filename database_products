@@ -1,4 +1,3 @@
-
 <?php
  
  mysql_connect("localhost","product1","987");
