@@ -7,7 +7,7 @@
  mysql_query("create database products;");
  mysql_query("use products;");
  mysql_query("create table products(id int not null auto_increment primary key, 
- 	 name char(30), firm char(30), model char(30), usage int, 
+ 	 name char(15), firm char(15), model char(15), usage int, 
  	 create date, new char (1));");
  mysql_query("insert into products (name,firm,model,usage,create,new) 
  	values ('phone', 'Apple','3G',2,'01-09-2011','1');");
