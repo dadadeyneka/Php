@@ -1,0 +1,39 @@
+<html>
+ <head>
+ 	<title>Add a new product's data</title>
+ </head>
+ <body>
+ 	<h1> Product's form </h1>
+ 	<form method="post" action="add1.php">
+ 		<p>
+ 		<label>  Name:
+ 			<input type=text name="name">
+ 		</label>
+ 		<br>
+ 		<label> Firm:
+ 			<input type=text name="firm">
+ 		</label>
+ 		<br>
+ 		<label> Model:
+ 			<input type=text name="model">
+ 		</label>
+ 		<br>
+ 		<label> Usage:
+ 			<input type=text name="usage">
+ 		</label>
+ 		<br>
+ 		<label> Create:
+ 			<input type=text name="created">
+ 		</label>
+ 		<br>
+ 		<label> New:
+ 			<select name="new or not">
+ 				<option value="1">New</option>
+ 				<option value="0">Used</option>
+ 			</select>
+ 		</label>
+ 		<input type=submit value="Add">
+ 	</p>
+ 	</form>
+
+
