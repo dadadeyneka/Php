@@ -1,0 +1,10 @@
+<?php
+ $id = $_REQUEST['id'];
+ 
+ mysql_connect("localhost","product2","987");
+ mysql_query("use products");
+ $query = "delete from products where id=$id";
+ echo "q=$query";
+ mysql_query($query);
+ 
+ ?>
