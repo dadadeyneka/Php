@@ -1,0 +1,23 @@
+
+<?php
+ 
+ mysql_connect("localhost","product1","987");
+ 
+ mysql_query("drop database if exists products;");
+ mysql_query("create database products;");
+ mysql_query("use products;");
+ mysql_query("create table products(id int not null auto_increment primary key, 
+ 	 name char(30), firm char(30), model char(30), usage int, 
+ 	 create date, new char (1));");
+ mysql_query("insert into products (name,firm,model,usage,create,new) 
+ 	values ('phone', 'Apple','3G',2,'01-09-2011','1');");
+ mysql_query("insert into productss (name,firm,model,usage,create,new) 
+ 	values ('Ipad', 'Apple','5G',2,'01-10-2011','1');");
+ mysql_query("insert into students (name,firm,model,usage,create,new) 
+ 	values ('phone', 'HTC','Desire 1X',5,'01-12-2013','1');");
+mysql_query("insert into students (name,firm,model,usage,create,new) 
+ 	values ('phone', 'Samsung','Galaxy S3',5,'01-12-2013','1');");
+mysql_query("insert into students (name,firm,model,usage,create,new) 
+ 	values ('player', 'Transcend','1X',5,'01-12-2010','1');");
+ echo "Ok.";
+ ?>
